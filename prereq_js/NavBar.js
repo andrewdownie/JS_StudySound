@@ -17,10 +17,7 @@ function LoadNavBar(navbarReady){
 
     $.get(NAV_FILE_PATH, function(data){
         $(data).prependTo("body")
-        if(navbarReady){
-            navbarReady()
-        }
-
+        navbarReady()
     }, 'text' );
 }
 
