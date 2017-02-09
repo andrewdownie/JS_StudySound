@@ -25,16 +25,10 @@ function FillDocumentElement(contents, file_id){
     $("table tr td p").each(function(index){
         console.log( index + ": " + $( this ).text() );
         newContents += '<div class="row">'
-        //<input onclick='responsiveVoice.speak("Hello World");' type='button' value='🔊 Play' />
-        newContents += '<input class="col-xs-2" onclick=\'responsiveVoice.speak("' + $(this).text() + '");\' type="button" value="Play" />'
+        newContents += '<input class="col-xs-2" onclick=\'responsiveVoice.speak("' + $(this).text() + '", "US English Female");\' type="button" value="Play" />'
         newContents += '<div class="col-xs-10">' + $(this).text() + '</div>'
         newContents += '</div>'
     });
-
-    //  1. loop through the table
-    //  2. add button setup to call responsive voice, with the contents of the table,
-    //      and also paste the text from the table on as well....
-    //  3. ... profit?
 
     $("#document-insertion").html(newContents)
 }
