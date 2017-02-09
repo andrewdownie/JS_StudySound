@@ -19,8 +19,4 @@ body{
     min-width: 50px;
 }
 
-input{
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
-}
+
