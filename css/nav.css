@@ -1,26 +1,7 @@
 body{
-  margin-top: 50px;
+  margin-top: 60px;
 }
 
 .navbar-fixed-top{
     border-bottom: 1px solid black;
-}
-
-.navbar-lower{
-    border-radius: 0;
-}
-
-.navbar-lower .navbar-nav > li > a {
-    padding-top: 5px;
-    padding-bottom: 5px;
-}
-.navbar-lower .navbar-nav > li{
-    float: left;
-    text-align: center;
-}
-
-
-
-.navbar-lower {
-    min-height: 32px;
 }

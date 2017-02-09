@@ -4,9 +4,10 @@ var backStack = []
 ///// Document Ready
 /////
 $(document).ready(function(){
-
+    LoadNavBar()
     RequestTextFile(FillDocumentElement, CONSTANTS.TARGET_DATA_FILE, CONSTANTS.API_KEY)
 });
+
 
 
 /////
@@ -19,5 +20,8 @@ function FillDocumentElement(contents, file_id){
 
     //alert("#" + file_id + " .contents-body")
     $("#document-insertion").html(contents)
-    console.log("fart")
+
+    ///
+    ///             modify the html recieved here
+    ///
 }
