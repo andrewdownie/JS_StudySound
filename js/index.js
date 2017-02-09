@@ -188,6 +188,7 @@ function FillDocumentElement(contents, file_id){
         newContents += '<input class="col-xs-2" onclick=\'responsiveVoice.speak("' + $(this).text() + '", "US English Female");\' type="button" value="Play" />'
         newContents += '<div class="col-xs-10">' + $(this).text() + '</div>'
         newContents += '</div>'
+        newContents += '<br/>'
     });
 
     $("#contents-body").html(newContents)
