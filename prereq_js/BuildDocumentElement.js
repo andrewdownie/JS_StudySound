@@ -20,6 +20,7 @@ function BuildDocumentElement(name, docID){
     docElement +=              name
     docElement += '        </a>'
     docElement += '    </h1>'
+    docElement += '    <br/>'
     docElement += '    <div id="contents-body">'
     docElement += '        Loading...'
     docElement += '    </div>'
