@@ -15,7 +15,7 @@ function BuildDocumentElement(name, docID){
     var docElement = ""
 
     docElement += '<div id="' + docID + '" class="col-md-12">'
-    docElement += '    <h1 class="contents-head">'
+    docElement += '    <h1 class="contents-head page-header">'
     docElement += '        <a target="_blank" href="https://docs.google.com/document/d/' + docID + '/edit">'
     docElement +=              name
     docElement += '        </a>'

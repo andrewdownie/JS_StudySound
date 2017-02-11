@@ -31,9 +31,9 @@ function RequestTextFile(callback, file_id, api_key){
 
 
         var response = jsonError.responseText
-        var result = response.replace(/________________/g, "")// Sketchy way of removing the new page indicator
+        //var result = response.replace(/________________/g, "")// Sketchy way of removing the new page indicator, don't think I need this since moving to html
 
-        callback(result, file_id)
+        callback(response, file_id)
     });
 
 }

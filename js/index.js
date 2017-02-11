@@ -181,14 +181,29 @@ function FillDocumentElement(contents, file_id){
     //alert("#" + file_id + " .contents-body")
     $("#contents-body").html(contents)
 
+
     newContents = ""
-    $("table tr td p").each(function(index){
-        console.log( index + ": " + $( this ).text() );
-        newContents += '<div class="row">'
-        newContents += '<input class="col-xs-2" onclick=\'responsiveVoice.speak("' + $(this).text() + '", "US English Female");\' type="button" value="Play" />'
-        newContents += '<div class="col-xs-10">' + $(this).text() + '</div>'
-        newContents += '</div>'
-        newContents += '<br/>'
+
+    
+
+    $("table").each(function(index){
+
+       $(this).prevAll("h1").first().each(function(index){
+           newContents += '<h2>' + $(this).text() + '</h2>'
+       });
+       
+
+        $(this).find("tr td p").each(function(index){
+            newContents += '<div class="row">'
+            newContents += '<input class="col-xs-2" onclick=\'responsiveVoice.speak("' + $(this).text() + '", "US English Female");\' type="button" value="Play" />'
+            newContents += '<div class="col-xs-10">' + $(this).text() + '</div>'
+            newContents += '</div>'
+            newContents += '<br/>'
+        });
+
+         newContents += '<br/>'
+         newContents += '<br/>'
+
     });
 
     $("#contents-body").html(newContents)
